@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนการจัดการเรียนรู้ดิจิทัล: ประวัติศาสตร์ศิลป์ไทย</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- SweetAlert2 (Popup สวยๆ) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        body { font-family: 'Sarabun', sans-serif; background-color: #f3f4f6; }
+        h1, h2, h3, h4, h5, h6, .font-prompt { font-family: 'Prompt', sans-serif; }
+        .math-display { overflow-x: auto; overflow-y: hidden; }
+    </style>
+</head>
+<body class="text-gray-800 pb-20">
+
+    <!-- Navbar -->
+    <nav class="bg-indigo-800 text-white p-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-palette text-2xl text-yellow-400"></i>
+                <div>
+                    <span class="font-bold text-lg font-prompt block leading-tight">Digital Lesson Plan</span>
+                    <span class="text-xs text-indigo-200">Active Learning & Technology Integration</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto max-w-5xl p-4 md:p-8 my-6 bg-white shadow-xl rounded-xl border border-gray-200">
+        
+        <!-- Header: School & Teacher Info -->
+        <header class="border-b-4 border-indigo-600 pb-6 mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+                <div class="flex-1">
+                    <h5 class="text-indigo-600 font-bold uppercase tracking-wide text-sm mb-1">กลุ่มสาระการเรียนรู้ศิลปะ (ทัศนศิลป์)</h5>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 font-prompt">โรงเรียนห้องสอนศึกษา ในพระอุปถัมภ์ฯ</h1>
+                    <div class="mt-4 space-y-1">
+                        <h2 class="text-2xl font-bold text-gray-800">เรื่อง ประวัติศาสตร์ศิลป์ไทย</h2>
+                        <h3 class="text-lg text-gray-500 font-light">(Thai Art History: Evolution of Masterpieces)</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-indigo-50 p-5 rounded-xl border border-indigo-100 min-w-[280px] shadow-sm">
+                    <div class="flex items-center gap-3 mb-2 border-b border-indigo-200 pb-2">
+                        <div class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fa-solid fa-user-tie"></i></div>
+                        <div>
+                            <p class="text-xs text-gray-500">ครูผู้สอน</p>
+                            <p class="font-bold text-indigo-900">นายศรายุธ ตัวลือ</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-sm text-gray-700">
+                        <p class="flex justify-between"><span><i class="fa-solid fa-book mr-2 text-indigo-400"></i>วิชา:</span> <span class="font-bold">ทัศนศิลป์ (ศ22101)</span></p>
+                        <p class="flex justify-between"><span><i class="fa-solid fa-layer-group mr-2 text-indigo-400"></i>ชั้น:</span> <span class="font-bold">มัธยมศึกษาปีที่ 2</span></p>
+                        <p class="flex justify-between"><span><i class="fa-solid fa-calendar-alt mr-2 text-indigo-400"></i>ภาคเรียน:</span> <span class="font-bold">ภาคเรียนที่ 1</span></p>
+                        <p class="flex justify-between"><span><i class="fa-regular fa-clock mr-2 text-indigo-400"></i>เวลา:</span> <span class="font-bold">2 คาบ (100 นาที)</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Innovation Link & Download Button -->
+            <div class="mt-6 p-4 bg-gradient-to-r from-amber-600 to-indigo-700 rounded-lg text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="bg-white/20 p-3 rounded-full backdrop-blur-sm">
+                        <i class="fa-solid fa-synagogue text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg font-prompt">สื่อการสอนนวัตกรรม (Web Application)</h3>
+                        <p class="text-amber-100 text-sm">ThaiArt Explorer & Virtual Curator Challenge (Google Arts & Culture + Interactive Padlet)</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <!-- New Button: Download -->
+                    <a href="https://drive.google.com/drive/folders/1t7ylbXk6bFDxvBFogBGms_e0D8c3Qh5G?usp=sharing" target="_blank" class="bg-white/20 border border-white/50 text-white px-5 py-2 rounded-full font-bold hover:bg-white/30 transition shadow-md flex items-center justify-center text-sm backdrop-blur-sm whitespace-nowrap">
+                        <i class="fa-brands fa-google-drive mr-2"></i> ดาวน์โหลดแผนฯ
+                    </a>
+                    
+                    <!-- Existing Button: Open App -->
+                    <a href="LearningByQuiz.html" target="_blank" class="bg-white text-indigo-800 px-6 py-2 rounded-full font-bold hover:bg-amber-50 transition shadow-md transform hover:scale-105 flex items-center justify-center whitespace-nowrap">
+                        <i class="fa-solid fa-compass mr-2"></i> เปิดใช้งาน App
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Left Column: Info & Standards -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Learning Outcomes -->
+                <div class="bg-orange-50 p-5 rounded-lg border-l-4 border-orange-500 shadow-sm">
+                    <h3 class="font-bold text-lg text-orange-800 mb-3 font-prompt">
+                        <i class="fa-solid fa-scroll mr-2"></i> ผลการเรียนรู้ / ตัวชี้วัด
+                    </h3>
+                    <p class="text-sm text-gray-700 leading-relaxed text-justify">
+                        "ระบุเกี่ยวกับยุคสมัยของงานศิลปะทัศนศิลป์ไทย เปรียบเทียบความแตกต่างของงานศิลปะในแต่ละยุคสมัย และ<b>นำองค์ความรู้ทางประวัติศาสตร์ศิลป์ไทยมาใช้วิเคราะห์ ประเมินคุณค่า และประยุกต์สร้างสรรค์แนวคิดนิทรรศการเสมือนจริงในชีวิตประจำวัน</b>"
+                    </p>
+                </div>
+
+                <!-- Concept & Equations -->
+                <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-gray-800 mb-3 font-prompt flex items-center">
+                        <i class="fa-solid fa-monument text-purple-600 mr-2"></i> สมการวิเคราะห์ศิลปะ
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-3 rounded text-center border border-gray-200">
+                            <span class="text-xs text-gray-500 block mb-1">สมการโครงสร้างยุคสมัยศิลป์ไทย</span>
+                            <div class="math-display">$$ \text{Art Style} = \text{Faith} + \text{Culture} + \text{Era Craftsman} $$</div>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded text-center border border-gray-200">
+                            <span class="text-xs text-gray-500 block mb-1">เอกลักษณ์ศิลป์ 4 ยุคทอง</span>
+                            <div class="math-display text-xs">
+                                $$ \text{ทวารวดี(ธรรมจักร)} \rightarrow \text{สุโขทัย(อ่อนช้อย/ปางลีลา)} \rightarrow \text{อยุธยา(ทรงเครื่อง/อลังการ)} \rightarrow \text{รัตนโกสินทร์(ผสมผสาน)} $$
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objectives -->
+                <div class="bg-blue-50 p-5 rounded-lg border border-blue-100">
+                    <h3 class="font-bold text-lg text-blue-900 mb-3 font-prompt">
+                        <i class="fa-solid fa-bullseye mr-2"></i> จุดประสงค์ (KPA)
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex gap-2">
+                            <span class="badge bg-blue-200 text-blue-800 px-2 rounded font-bold">K</span>
+                            <span>นักเรียนสามารถระบุและอธิบายลักษณะเด่นของงานศิลปะไทยในแต่ละยุคสมัยได้อย่างถูกต้อง</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="badge bg-green-200 text-green-800 px-2 rounded font-bold">P</span>
+                            <span>นักเรียนสามารถวิเคราะห์และจำแนกโบราณวัตถุผ่านกิจกรรม "นักสืบประวัติศาสตร์ศิลป์" ได้แม่นยำ</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="badge bg-red-200 text-red-800 px-2 rounded font-bold">A</span>
+                            <span>นักเรียนแสดงความภาคภูมิใจในมรดกทางวัฒนธรรมไทย และสนุกสนานกับการทำงานร่วมกัน</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: 5E Process -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
+                    <div class="bg-gray-50 p-4 border-b border-gray-200 flex justify-between items-center">
+                        <h3 class="font-bold text-xl text-indigo-700 font-prompt">
+                            <i class="fa-solid fa-chalkboard-teacher mr-2"></i> กิจกรรมการเรียนรู้ (Art Detective & Curator Challenge)
+                        </h3>
+                    </div>
+
+                    <div class="p-6 space-y-6">
+                        
+                        <!-- Step 1 -->
+                        <div class="relative pl-8 border-l-2 border-indigo-200">
+                            <div class="absolute -left-[17px] top-0 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                            <h4 class="font-bold text-gray-800 font-prompt text-lg">ขั้นจุดประกายความสนใจ (Spark & Engage) <span class="text-xs bg-gray-200 px-2 py-1 rounded ml-2 text-gray-600">15 นาที</span></h4>
+                            <div class="mt-2 text-gray-600 text-sm space-y-2">
+                                <p>• <b>Stimulus:</b> ครูเปิดภาพวิดีโอ 3D Virtual Gallery ชวนนักเรียนสวมบทบาทเป็น "ยอดนักสืบประวัติศาสตร์ศิลป์" ส่องโบราณวัตถุปริศนาที่ไม่ระบุยุคสมัย</p>
+                                
+                                <div class="mt-3 mb-3">
+                                    <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-3">
+                                        <p class="text-sm font-bold text-indigo-800 mb-2"><i class="fa-solid fa-vr-cardboard mr-2"></i>สื่อประกอบ: Google Arts & Culture (พิพิธภัณฑสถานแห่งชาติ พระนครเสมือนจริง)</p>
+                                        <!-- Fixed Display Frame -->
+                                        <div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-sm bg-black">
+                                            <iframe 
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.541457816041!2d100.4913214!3d13.7576088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e299ae1be174e9%3A0xbcfabfcf0c2132a6!2sNational%20Museum%20Bangkok!5e0!3m2!1sen!2sth!4v1680000000000!5m2!1sen!2sth" 
+                                                class="absolute top-0 left-0 w-full h-full border-0" 
+                                                allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <p>• <b>Discussion:</b> ชวนคิด "ทำไมพระพุทธรูปปางลีลายุคสุโขทัยถึงดูอ่อนช้อยเหมือนไร้กระดูก ต่างจากยุคอยุธยาที่แต่งเครื่องทรงอลังการ?"</p>
+                                <p>• <b>Onboarding:</b> นักเรียนสแกน QR Code เข้าสู่แพลตฟอร์มนวัตกรรม ThaiArt Explorer บนแท็บเล็ต/โทรศัพท์มือถือ</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="relative pl-8 border-l-2 border-indigo-200">
+                            <div class="absolute -left-[17px] top-0 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                            <h4 class="font-bold text-gray-800 font-prompt text-lg">ขั้นสำรวจและไขปริศนา (Explore & Art Detective Mission) <span class="text-xs bg-gray-200 px-2 py-1 rounded ml-2 text-gray-600">30 นาที</span></h4>
+                            <div class="mt-2 text-gray-600 text-sm space-y-2">
+                                <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded font-bold mb-1">[Task-Based Activity] ภารกิจ: ตามหาลายเซ็นแห่งยุคสมัย (Art Mystery Challenge)</span>
+                                <p>• <b>Group Formation:</b> แบ่งกลุ่มนักเรียนเป็น 4 ทีม (ทีมทวารวดี, ทีมสุโขทัย, ทีมอยุธยา, ทีมรัตนโกสินทร์)</p>
+                                <p>• <b>Mission:</b> รับการ์ดภาพ "โบราณวัตถุและสถาปัตยกรรมปริศนา" กลุ่มละ 5 ภาพ จากนั้นใช้เว็บแอปพลิเคชันเพื่อสืบค้น ร่องรอย เส้นสาย ลวดลาย และวัสดุ เพื่อระบุยุคสมัยให้ถูกต้อง</p>
+                                <p>• <b>Gamification:</b> กลุ่มที่วิเคราะห์และติดป้ายระบุยุคสมัยพร้อมเหตุผลลงบน Padlet Interactive Board ได้ถูกต้องมากที่สุด รับตรา "สุดยอดนักสืบประวัติศาสตร์ศิลป์"</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Explanation -->
+                        <div class="relative pl-8 border-l-2 border-indigo-200">
+                            <div class="absolute -left-[17px] top-0 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+                            <h4 class="font-bold text-gray-800 font-prompt text-lg">ขั้นวิเคราะห์และนำเสนอ (Analyze & Gallery Talk) <span class="text-xs bg-gray-200 px-2 py-1 rounded ml-2 text-gray-600">25 นาที</span></h4>
+                            <div class="mt-2 text-gray-600 text-sm space-y-2">
+                                <span class="inline-block bg-pink-100 text-pink-700 text-xs px-2 py-1 rounded font-bold mb-1">[Interactive Presentation]</span>
+                                <p>• <b>Debrief:</b> สุ่มดึงภาพโบราณวัตถุจากระบบขึ้นหน้าจอใหญ่ ร่วมกันอภิปรายจุดสังเกตเฉพาะยุค เช่น พระพักตร์รูปไข่ (สุโขทัย), พระพักตร์สี่เหลี่ยมทรงเครื่อง (อยุธยา), จิตรกรรมฝาผนังมีมิติแบบตะวันตก (รัตนโกสินทร์)</p>
+                                <p>• <b>Correction:</b> ครูไขข้อขัดแย้งและความเข้าใจผิด (Misconception) เกี่ยวกับการได้รับอิทธิพลศิลปะต่างชาติ</p>
+                                <p>• <b>Tactics:</b> ตัวแทนแต่ละทีมออกมาแชร์ "สูตรสแกนงานศิลป์" รวดเร็วภายใน 1 นาที</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="relative pl-8 border-l-2 border-indigo-200">
+                            <div class="absolute -left-[17px] top-0 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">4</div>
+                            <h4 class="font-bold text-gray-800 font-prompt text-lg">ขั้นเชื่อมโยงและสร้างสรรค์ (Elaborate & Art Curator Challenge) <span class="text-xs bg-gray-200 px-2 py-1 rounded ml-2 text-gray-600">20 นาที</span></h4>
+                            <div class="mt-2 text-gray-600 text-sm space-y-2">
+                                <span class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded font-bold mb-1">[Creative Application] กิจกรรม: จัดนิทรรศการมินิมิวเซียม (Virtual Mini-Curator)</span>
+                                <p>• <b>Individual Test:</b> นักเรียนแต่ละคนรับบทเป็น "ภัณฑารักษ์น้อย (Curator)" เลือกผลงานศิลปะไทยที่ตนเองประทับใจที่สุด 1 ชิ้นจากนวัตกรรมแอปพลิเคชัน</p>
+                                <p>• <b>Peer Support Rule:</b> เพื่อนในกลุ่มช่วยกันระดมไอเดียคิด "คำบรรยายชวนว้าว (Creative Caption)" ความยาว 3 บรรทัดที่เชื่อมโยงคุณค่าศิลป์ไทยกับชีวิตยุคปัจจุบัน</p>
+                                <p>• <b>Challenge:</b> ครูเปิดเวลานับถอยหลัง 5 นาที ให้นักเรียนโพสต์ผลงานลงในคลังนิทรรศการห้องเรียนเสมือนจริง และร่วมกันกดหัวใจให้ผลงานของเพื่อน</p>
+                            </div>
+                        </div>
+
+                         <!-- Step 5 -->
+                         <div class="relative pl-8 border-l-2 border-indigo-200">
+                            <div class="absolute -left-[17px] top-0 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">5</div>
+                            <h4 class="font-bold text-gray-800 font-prompt text-lg">ขั้นสรุปและสะท้อนคิด (Evaluate & Reflection) <span class="text-xs bg-gray-200 px-2 py-1 rounded ml-2 text-gray-600">10 นาที</span></h4>
+                            <div class="mt-2 text-gray-600 text-sm space-y-2">
+                                <span class="inline-block bg-pink-100 text-pink-700 text-xs px-2 py-1 rounded font-bold mb-1">[Recognition & Assessment]</span>
+                                <p>• <b>Scoring:</b> ประเมินผลจาก 1) คะแนนการระบุยุคสมัยจากการ์ดภารกิจกลุ่ม 2) ความถูกต้องและสร้างสรรค์ของการบรรยายงานศิลป์รายบุคคล</p>
+                                <p>• <b>Awards:</b> มอบรางวัล "Top Thai Art Curator" สำหรับผู้ที่ได้รับการโหวตสูงสุด และร่วมกันสรุปคุณค่ามรดกทางศิลปวัฒนธรรมไทย</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
